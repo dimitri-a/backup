@@ -23,7 +23,6 @@ export function itemsFetchDataSuccess(items) {
 
 export function itemsFetchData(url) {
     return (dispatch) => {
-        debugger
         dispatch(itemsAreLoading(true));
 
         axios.get(url)

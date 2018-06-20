@@ -9,13 +9,15 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchData('./sample-data.json');
+  
   }
 
   render() {
+    console.log('testing in app.js this.props.employees',this.props.employees);
     return (
       <div>
         <Header />
-        <List />
+        <List employees={this.props.employees} />
       </div>
     );
   }
@@ -30,7 +32,7 @@ App.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    items: state.items,
+    employees: state.items.employees,
     hasError: state.itemsHaveError,
     isLoading: state.itemsAreLoading
   };

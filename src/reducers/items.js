@@ -21,6 +21,7 @@ export function itemsAreLoading(state = false, action) {
 export function items(state = [], action) {
     switch (action.type) {
         case 'ITEMS_FETCH_DATA_SUCCESS':
+        console.log('testing',action.items);
             return action.items;
 
         default:
