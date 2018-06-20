@@ -13,8 +13,6 @@ class App extends Component {
   }
 
   render() {
-    debugger
-    console.log('testing in app.js this.props.companyInfo',this.props.companyInfo);
     return (
       <div className='container'>
         <Header companyInfo={this.props.companyInfo}  />

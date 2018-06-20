@@ -16,7 +16,6 @@ export default class Employee extends Component {
     }
 
     render() {
-        console.log('testing',this.props.details);
         return (
             <div>
                 <div className='hidden-xs' onClick={this.modalToggle}>
@@ -42,7 +41,7 @@ export default class Employee extends Component {
                 <div className='visible-xs'>
                     <div className='col-xs-12 employee'>
                         <div className="col-xs-4">
-                            {/* <img className='img-responsive' src={this.props.details.avatar} alt=""/> */}
+                            <img className='img-responsive' src={this.props.details.avatar} alt=""/>
                         </div>
                         <div className="col-xs-8">
                             <div>

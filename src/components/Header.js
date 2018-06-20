@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Header = ({ companyInfo }) => {
-  console.log('hier header', companyInfo);
-
+ 
   const displayCompany = (companyInfo) ?
     (
       <header>

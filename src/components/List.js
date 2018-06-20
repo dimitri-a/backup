@@ -3,7 +3,6 @@ import Employee from './Employee';
 import PropTypes from 'prop-types'
 
 const List = ({ employees }) => {
-  console.log('hier employees', employees);
   const displayEmployees = (employees) ?
     (
       <div>
