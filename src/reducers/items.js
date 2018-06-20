@@ -28,13 +28,3 @@ export function items(state = [], action) {
             return state;
     }
 }
-
-export function toggle(state = false, action) {
-    switch (action.type) {
-        case 'TOGGLE_MODAL':
-            return action.toggle;
-
-        default:
-            return state;
-    }
-}

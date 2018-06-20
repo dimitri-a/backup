@@ -4,19 +4,20 @@ import List from '../components/List';
 import PropTypes from 'prop-types';
 import { itemsFetchData } from '../actions/items';
 import { connect } from 'react-redux';
+import '../App.css';
 
 class App extends Component {
 
   componentDidMount() {
     this.props.fetchData('./sample-data.json');
-  
   }
 
   render() {
-    console.log('testing in app.js this.props.employees',this.props.employees);
+    debugger
+    console.log('testing in app.js this.props.companyInfo',this.props.companyInfo);
     return (
-      <div>
-        <Header />
+      <div className='container'>
+        <Header companyInfo={this.props.companyInfo}  />
         <List employees={this.props.employees} />
       </div>
     );
@@ -33,6 +34,7 @@ App.propTypes = {
 const mapStateToProps = (state) => {
   return {
     employees: state.items.employees,
+    companyInfo:state.items.companyInfo,
     hasError: state.itemsHaveError,
     isLoading: state.itemsAreLoading
   };
